@@ -1,4 +1,4 @@
-var portraits = [];
+var portret = [];
 var img1, img2, img3, img4, img5;
 var hold=false;
 var blured=false;
@@ -33,7 +33,7 @@ function draw() {
     var nimg=int(5*noise(x*.002+cos(frameCount*.0001), y*.002+sin(frameCount*.001), sin(frameCount*.01)));
     for (var k = 0; k < 4; k++) {
       var col=pixels[k + 4 * (y * width + x)] ;
-      pixels[k + 4 * (y * width + x)] =int(.5*portraits[nimg].pixels[k+4* (y * width + x)]+.5*col);
+      pixels[k + 4 * (y * width + x)] =int(.5*portret[nimg].pixels[k+4* (y * width + x)]+.5*col);
     }
   }
   if(!hold)updatePixels();
